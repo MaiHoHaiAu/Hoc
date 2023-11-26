@@ -3,9 +3,7 @@ import time
 import random
 
 pygame.init()
-
 # Định nghĩa một số màu sử dụng trong trò chơi
-
 black = (0, 0, 0)
 red = (213, 50, 80)
 blue = (50, 153, 213)
@@ -14,7 +12,6 @@ dis_width = 700
 dis_height = 600
 #Hình nền 
 background = pygame.image.load('background.png')
-
 # Tạo cửa sổ trò chơi với kích thước và tiêu đề tương ứng
 dis = pygame.display.set_mode((dis_width, dis_height))
 pygame.display.set_caption('Snake Game-Nhóm 2')
@@ -23,10 +20,8 @@ bg_width, bg_height = background.get_size()
 x = dis_width/2 - bg_width/2  
 y = dis_height/2 - bg_height/2
 dis.blit(background, (x, y)) 
-
 # Khởi tạo đối tượng clock để giới hạn tốc độ khung hình của trò chơi
 clock = pygame.time.Clock()
-
 # Định nghĩa kích thước của mỗi khối con rắn và tốc độ di chuyển của rắn
 snake_block = 20
 snake_speed = 10
@@ -34,13 +29,12 @@ apple_block = 20
 block_size = snake_block
 #Hình trái táo
 apple_image = pygame.transform.scale(pygame.image.load('Apple.png'), (apple_block, apple_block))
-
 #Đầu rắn
 # 333 Hình ảnh đầu rắn 
 head_img = pygame.image.load('headSNAKE.png')
 head_img = pygame.transform.scale(head_img, (block_size, block_size)) 
 # Đuôi rắn
-body1_img = pygame.image.load('headSNAKE.png')
+body1_img = pygame.image.load('body.png')
 body1_img = pygame.transform.scale(body1_img, (block_size, block_size)) 
 body_imgs=[body1_img]
 
