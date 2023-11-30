@@ -41,7 +41,7 @@ body_imgs=[body1_img]
 #leg_img = pygame.transform.scale(leg_img, (block_size, block_size)) 
 
 # Định nghĩa font chữ cho điểm số và thông báo trò chơi
-font_style = pygame.font.SysFont(None, 50)
+font_style = pygame.font.SysFont(None, 50) 
 score_font = pygame.font.SysFont(None, 35)
 
 
@@ -82,9 +82,12 @@ font_style = pygame.font.SysFont(None, 50)
 score_font = pygame.font.SysFont(None, 35)
 
 #def our_snake(snake_block, snake_list):
-    # Vẽ rắn lên màn hình
+    # Vẽ rắn lên màn hình ver0
+    # #for x in snake_list:
+    #    #pygame.draw.rect(dis, black, [x[0], x[1], snake_block, snake_block])
+ # Vẽ rắn lên màn hình ver1 tọa độ 1;2
     #for x in snake_list:
-        #pygame.draw.rect(dis, black, [x[0], x[1], snake_block, snake_block])
+        #pygame.draw.rect(dis, black, [x[1], x[2], snake_block, snake_block]) 
 # 333
     # Tạo phần tử mới
  
