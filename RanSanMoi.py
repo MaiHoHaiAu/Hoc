@@ -47,12 +47,12 @@ score_font = pygame.font.SysFont(None, 35)
 
 def Your_score(score):
      # Hiển thị điểm số lên màn hình
-    value = score_font.render("Your Score: " + str(score), True, black)
+    value = score_font.render("Your Score: " + str(score), True, red)
     dis.blit(value, [0, 0])
 
 def show_high_score():
    high_score = get_high_score()
-   value = score_font.render("High Score: " + str(high_score), True, black)
+   value = score_font.render("High Score: " + str(high_score), True, green)
    dis.blit(value, [0, 50])
 
 def save_score(score):
