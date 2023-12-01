@@ -8,8 +8,8 @@ black = (0, 0, 0)
 red = (213, 50, 80)
 blue = (50, 153, 213)
 # Định nghĩa kích thước của cửa sổ trò chơi
-dis_width = 700
-dis_height = 600
+dis_width = 800
+dis_height = 650
 #Hình nền 
 background = pygame.image.load('background.png')
 # Tạo cửa sổ trò chơi với kích thước và tiêu đề tương ứng
