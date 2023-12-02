@@ -216,7 +216,7 @@ def gameLoop():
             
             Length_of_snake += 5
              
-    # Tăng tốc +1 mỗi lần ăn
+    # Tăng tốc +1 mỗi lần ăn được mồi
             snake_speed += 5
             
         clock.tick(snake_speed)     
