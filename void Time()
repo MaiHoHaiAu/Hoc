@@ -1,0 +1,13 @@
+void Time()
+{
+    int time = clock()/1000, gio, phut, giay;
+    gio = time/3600; phut = (time/60)%60, giay = time%60;
+    gotoxy(67, 3);TextColor(15);
+    if(giay < 10 && gio<10 && phut<10) printf("0%d:0%d:0%d",gio, phut, giay );
+    else if(giay < 10 && gio<10) printf("0%d:%d:0%d",gio, phut, giay );
+    else if(phut < 10 && gio<10) printf("0%d:0%d:%d",gio, phut, giay );
+    else if(giay < 10 && phut<10) printf("%d:%d:0%d",gio, phut, giay );
+    else if(giay < 10 ) printf("%d:%d:0%d",gio, phut, giay );
+    else if(gio<10) printf("0%d:%d:%d",gio, phut, giay );
+    else if(phut<10)printf("%d:0%d:%d",gio, phut, giay );
+}
