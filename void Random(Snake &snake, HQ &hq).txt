@@ -1,0 +1,11 @@
+void Random(Snake &snake, HQ &hq)
+{
+    if(snake.dot[0].x == hq.td.x && snake.dot[0].y == hq.td.y)
+    {
+    hq.td.x = rand()%69+5;
+    hq.td.y = rand()%18+8;
+    snake.n++;
+    Beep(1000, 100);
+    }
+    gotoxy(78,40);
+}
