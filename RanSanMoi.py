@@ -23,9 +23,9 @@ dis.blit(background, (x, y))
 # Khởi tạo đối tượng clock để giới hạn tốc độ khung hình của trò chơi
 clock = pygame.time.Clock()
 # Định nghĩa kích thước của mỗi khối con rắn và tốc độ di chuyển của rắn
-snake_block = 20
-snake_speed = 10
-apple_block = 20
+snake_block = 30
+snake_speed = 8
+apple_block = 30
 block_size = snake_block
 #Hình trái táo
 apple_image = pygame.transform.scale(pygame.image.load('Apple.png'), (apple_block, apple_block))
