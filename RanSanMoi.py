@@ -186,8 +186,8 @@ def gameLoop():
         if x1 >= dis_width or x1 < 0 or y1 >= dis_height or y1 < 0:
             # Kiểm tra nếu rắn chạm vào biên màn hình, kết thúc trò chơi
             game_close = True
-        x1 += x1_change
-        y1 += y1_change
+        x1 += x1_change;
+        y1 += y1_change;
         draw()
         dis.blit(apple_image, (foodx, foody))
         snake_Head = []
