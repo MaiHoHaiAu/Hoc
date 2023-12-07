@@ -198,9 +198,9 @@ def gameLoop():
             del snake_List[0]
 
         for x in snake_List[:-1]:
-            # Kiểm tra nếu rắn tự cắn vào mình, kết thúc trò chơi
+            # Kiểm tra nếu rắn tự cắn vào mình, trò chơi kết thúc trò chơi
             if x == snake_Head:
-                game_close = True
+                game_close = True;
 
         our_snake(snake_block, snake_List)
         Your_score(Length_of_snake - 1)
