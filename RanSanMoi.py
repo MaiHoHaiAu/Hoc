@@ -7,6 +7,7 @@ pygame.init()
 black = (0, 0, 0)
 red = (213, 50, 80)
 blue = (50, 153, 213)
+green= (0,128,0)
 # Định nghĩa kích thước của cửa sổ trò chơi
 dis_width = 800
 dis_height = 650
@@ -23,9 +24,9 @@ dis.blit(background, (x, y))
 # Khởi tạo đối tượng clock để giới hạn tốc độ khung hình của trò chơi
 clock = pygame.time.Clock()
 # Định nghĩa kích thước của mỗi khối con rắn và tốc độ di chuyển của rắn
-snake_block = 30
+snake_block = 20
 snake_speed = 8
-apple_block = 30
+apple_block = 20
 block_size = snake_block
 #Hình trái táo
 apple_image = pygame.transform.scale(pygame.image.load('Apple.png'), (apple_block, apple_block))
@@ -53,7 +54,7 @@ def Your_score(score):
 def show_high_score():
    high_score = get_high_score()
    value = score_font.render("High Score: " + str(high_score), True, green)
-   dis.blit(value, [0, 50])
+   dis.blit(value, [0, 25])
 
 def save_score(score):
    # Khai báo hàm lưu high score:
@@ -78,8 +79,8 @@ def update_high_score(score):
 clock = pygame.time.Clock()
 
 # Định nghĩa font chữ cho điểm số và thông báo trò chơi
-font_style = pygame.font.SysFont(None, 50)
-score_font = pygame.font.SysFont(None, 35)
+#font_style = pygame.font.SysFont(None, 50)
+#score_font = pygame.font.SysFont(None, 35)
 
 #def our_snake(snake_block, snake_list):
     # Vẽ rắn lên màn hình ver0
@@ -148,7 +149,7 @@ def gameLoop():
             dis.blit(apple_image, (foodx, foody))
             our_snake(snake_block, snake_List) 
             #dis.fill(blue)
-            message("You lost! Press C-Play Again or Q-Quit", red)
+            message("You lost! Press P - play again or Q - quit.", red)
             Your_score(Length_of_snake - 1)
             show_high_score()
             pygame.display.update()
@@ -162,8 +163,8 @@ def gameLoop():
                     if event.key == pygame.K_q:
                         game_over = True
                         game_close = False
-                    if event.key == pygame.K_c:
-                        snake_speed = 10
+                    if event.key == pygame.K_p:
+                        snake_speed = 8
                         gameLoop()
 
         for event in pygame.event.get():
@@ -217,7 +218,7 @@ def gameLoop():
             Length_of_snake += 5
              
     # Tăng tốc +1 mỗi lần ăn được mồi
-            snake_speed += 5
+            snake_speed += 3
             
         clock.tick(snake_speed)     
     
